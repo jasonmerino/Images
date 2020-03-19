@@ -4,9 +4,14 @@ import { IPixabayHit } from "../types/pixabay-types";
 import { space1 } from "../theme/space.theme";
 import { Row } from "./row.component";
 import { Spacer } from "./spacer.component";
-import { lightAlpha7 } from "../theme/color.theme";
+import { lightAlpha7, light1 } from "../theme/color.theme";
 
 const styles = StyleSheet.create({
+  image: {
+    height: 300, // this is just based on what looks decent for now
+    width: "100%",
+    marginBottom: 1
+  },
   likes: {
     backgroundColor: lightAlpha7,
     padding: space1,
@@ -21,10 +26,7 @@ export function SearchItem({ item }: { item: IPixabayHit }) {
       key={item.webformatURL}
       resizeMode="cover"
       source={{ uri: item.webformatURL }}
-      style={{
-        height: 300, // this is just based on what looks decent for now
-        width: "100%"
-      }}
+      style={styles.image}
     >
       <Spacer />
       <Row>

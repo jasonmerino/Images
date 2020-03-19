@@ -35,7 +35,7 @@ export const HomeScreen: FC = () => {
     <SafeAreaView>
       <ScrollView>
         <Padding all={space1}>
-          <Text size="large">Popular Categories</Text>
+          <Text size="large">Browse Categories</Text>
         </Padding>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {[
@@ -57,7 +57,7 @@ export const HomeScreen: FC = () => {
           ))}
         </ScrollView>
         <Padding all={space1}>
-          <Text size="large">Popular</Text>
+          <Text size="large">Popular Images</Text>
         </Padding>
         {browseImages.map(item => (
           <SearchItem key={item.id} item={item} />
